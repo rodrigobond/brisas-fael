@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <html>
 <head>
 	<title>Controle de Estoque e Carrinho de Compras</title>
@@ -7,6 +6,7 @@
 </head>
 
 <body>
+<?php session_start(); ?>
 	<?php
 	
 	if(isset($_SESSION['valid'])) {			
