@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <html>
 <head>
 	<title>Controle de Estoque e Carrinho de Compras</title>
@@ -6,7 +7,7 @@
 </head>
 
 <body>
-<?php session_start(); ?>
+
 	<?php
 	
 	if(isset($_SESSION['valid'])) {			
@@ -16,14 +17,14 @@
 	    <?php while($res = mysqli_fetch_array($result)) {	
 	    $id = $res['id']; } ?>
 		<div class="header">
-		<br><h1><strong><center>  :::::    Bem vindo ao Sistema  Estoque Brisas  :::::  </center></strong></h1></br>
+		<br><h1><strong><center>  :::::    Bem vindo ao Sistema  Estoque Brisas & FAEL    :::::  </center></strong></h1></br>
 	    </div>
 		<h3 id="welcome_banner">Boa Tarde, <?php echo $_SESSION['name'] ?>!</h3><br><br><br>
         <div class="menu-index">
            <form>
-            <br><input type=button onClick="parent.location='view.php'" value='Gerenciamento dos Produtos'><br>
-			<br><input type=button onClick="parent.location='cart.php?id=<?php echo $id ?>'" value='Carrinho de Compras'><br>
-		    <br><input type=button onClick="parent.location='logout.php'" value='Encerrar Sessão'><br><br><br>
+            <br><input type=button onClick="location='view.php'" value='Gerenciamento dos Produtos'><br>
+			<br><input type=button onClick="location='cart.php?id=<?php echo $id ?>'" value='Carrinho de Compras'><br>
+		    <br><input type=button onClick="location='logout.php'" value='Encerrar Sessão'><br><br><br>
 		    <img width="200px" height="200px" src="estoque.jfif">
 		   </form>
 		</div>
